@@ -1,0 +1,56 @@
+body {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+/* Custom class for code blocks */
+.code-block {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    direction: ltr; /* Code should always be LTR */
+    text-align: left;
+}
+
+/* Custom tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted yellow;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -125px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    direction: rtl; /* Tooltip text should be RTL */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styles for interactive diagrams */
+.interactive-diagram-node {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+.interactive-diagram-node:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px #facc15); /* Corresponds to yellow-400 */
+}
